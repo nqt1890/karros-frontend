@@ -1,0 +1,16 @@
+
+.banner {
+    position: relative;
+    display: block;
+}
+
+.row {
+    width: 100%
+}
+
+.top-section {
+    position: absolute;
+    z-index: 100;
+}
+
+
