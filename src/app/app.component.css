@@ -2,15 +2,112 @@
 .banner {
     position: relative;
     display: block;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .row {
-    width: 100%
+    width: 100%;
+    margin: 0;
+}
+
+carousel {
+    grid-row-start: 1;
+    grid-column-start: 1;
 }
 
 .top-section {
-    position: absolute;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 10;
     z-index: 100;
+    color: white;
+    padding: 30px 75px 40px 75px;
+    min-width: 100% !important;
 }
 
+.top-text {
+    font-size: 35px;
+}
+
+.btn {
+    border-radius: 0;
+    margin: 0 10px;
+    color: white;
+    padding: 5px 15px;
+}
+
+.btn:hover {
+    opacity: 70%;
+}
+
+.btn-search {
+    background-image: url("/../assets/search-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    height: 100%;
+}
+
+.btn-light {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.btn-light-wrap {
+    background-color: transparent;
+    border-color: white;
+}
+
+.btn-primary {
+    background-color: #ff047c;
+    border-color: #ff047c;
+}
+
+.row-bottom {
+    height: 90%;
+    padding-top: 180px;
+}
+
+.row-bottom .title {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.row-detail {
+    width: 100%;
+    margin: 15px;
+}
+
+.info span {
+    margin: 7px;
+}
+
+.row-detail .box {
+    float: right;
+    margin: 0 25px;
+    padding: 15px;
+    border: 1px solid white;
+}
+
+.star {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    height: 20px;
+    width: 20px;
+    margin: 8px;
+}
+
+.star-full {
+    background-image: url('/../assets/star.png');
+}
+
+.star-half {
+    background-image: url('/../assets/star-half.png');
+}
+
+.star-less {
+    background-image: url('/../assets/star-less.png');
+}
 

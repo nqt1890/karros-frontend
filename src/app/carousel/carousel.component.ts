@@ -30,6 +30,8 @@ export class CarouselComponent implements OnInit {
 
   currentSlide = 0;
 
+  indicator = ["active", "", ""]
+
   ngOnInit(): void {
     this.Repeat();
   }
