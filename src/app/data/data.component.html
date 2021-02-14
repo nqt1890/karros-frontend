@@ -1,0 +1,24 @@
+<div class="" (window:scroll)="handleScrollEvent()">
+    <!-- <div class="notice">{{page + '/' + maxPage}}</div> -->
+    <div *ngFor="let list of movieGroups; let i = index" class="row" >
+        <div class="col-md-3 detail" *ngFor="let item of list; let j = index">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{imageUrl(item.poster_path)}}" alt="Card image cap">
+                <div class="card-body row">
+                    <div class="col-10">
+                        <h5 class="card-title">{{item.title}}</h5>
+                        <p class="card-text">{{getMovieGenres(item.genre_ids)}}</p>
+                    </div>
+                    <div class="col-2 vote">
+                        <span class="vote-box">{{item.vote_average}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center loading" *ngIf="maxPage == 0 || page < maxPage">
+        <img src="assets/loading-icon.png" height="35px"/>
+        <div>Loading</div>
+    </div>
+</div>

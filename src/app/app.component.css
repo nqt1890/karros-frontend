@@ -22,7 +22,7 @@ carousel {
     grid-column-end: 10;
     z-index: 100;
     color: white;
-    padding: 30px 75px 40px 75px;
+    padding: 30px 75px 0 75px;
     min-width: 100% !important;
 }
 
@@ -66,7 +66,13 @@ carousel {
 
 .row-bottom {
     height: 90%;
-    padding-top: 180px;
+    padding-top: 400px;
+}
+
+@media screen and (max-width: 768px) {
+    .row-bottom {
+        padding-top: 190px;
+    }
 }
 
 .row-bottom .title {
@@ -76,7 +82,11 @@ carousel {
 
 .row-detail {
     width: 100%;
-    margin: 15px;
+    margin: 10px;
+}
+
+.row-detail .buttons {
+    margin: auto;
 }
 
 .info span {
@@ -111,3 +121,69 @@ carousel {
     background-image: url('/../assets/star-less.png');
 }
 
+/* ===================================================================================== */
+
+.main-data {
+    background-color: #f8f8f8;
+    width: 100%;
+    height: 100%;
+    padding: 50px 75px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    padding: 15px 30px;
+    background-color: #f8f8f8;
+    color: #97989f;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #ff047c;
+    font-weight: bold;
+    border-bottom: solid 3px #ff047c ;
+}
+
+.nav-tabs .nav-link.active {
+    color: #ff047c;
+    font-weight: bold;
+    border-bottom: solid 3px #ff047c ;
+}
+
+.dropdown-menu {
+    background-color: #f8f8f8;
+}
+
+.dropdown-item {
+    color: #97989f;
+    padding: 10px 30px;
+}
+
+/* ===================================================================================== */
+
+.footer {
+    padding: 30px 75px 100px 75px;
+}
+
+.footer .title {
+    font-size: 25px;
+}
+
+.foot-text {
+    color: #97989f;
+}
+
+span.foot-text {
+    margin-left: 50px;
+}
+
+.foot-icon {
+    margin-left: 12px;
+}
+
+.footer hr {
+    margin: 20px 15px;
+}

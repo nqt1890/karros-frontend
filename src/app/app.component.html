@@ -1,11 +1,10 @@
 <div class="banner">
-  
   <div class="top-section container">
     <div class="row">
-      <div class="float-left col-6 float-left top-text">
+      <div class="float-left col-md-6 float-left top-text">
         THEMOVIEBOX
       </div>
-      <div class="float-right col-6">
+      <div class="float-right col-md-6">
         <button type="button" class="btn btn-primary float-right">SIGN UP</button>
         <button type="button" class="btn btn-light float-right">LOGIN</button>
         <button type="button" class="btn btn-search float-right">
@@ -26,12 +25,12 @@
         <span>Duration: 1h 52m</span>
       </div>
       <div class="row-detail row">
-        <div class="col-6 float-left">
+        <div class="col-md-6 float-left buttons">
           <button type="button" class="btn btn-primary">WATCH MOVIE</button>
           <button type="button" class="btn btn-light-wrap">VIEW INFO</button>
           <button type="button" class="btn btn-light">+ ADD TO WISHLIST</button>
         </div>
-        <div class="col-6">
+        <div class="col-md-6">
           <div class="box">
             <div class="row">
               <span class="font-weight-bold">Rating &nbsp;</span>
@@ -50,9 +49,62 @@
       </div>
     </div>
   </div>
-
   <carousel></carousel>
-  
+</div>
+
+<div class="main-data">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="popular-tab" data-toggle="tab" href="#popular" role="tab" aria-controls="popular" aria-selected="true">Popular</a>
+      <a class="nav-item nav-link" id="top_rate-tab" data-toggle="tab" href="#top_rate" role="tab" aria-controls="top_rate" aria-selected="false">Top Rated</a>
+      <a class="nav-item nav-link" id="upcoming-tab" data-toggle="tab" href="#upcoming" role="tab" aria-controls="upcoming" aria-selected="false">Upcoming</a>
+      <div class="dropdown">
+        <a class="nav-item nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Genre
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#" *ngFor="let item of genres | keyvalue">{{item.value}}</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="popular" role="tabpanel" aria-labelledby="nav-popular">
+      <app-data [type]="'popular'" [genres]="genres"></app-data>
+    </div>
+    <div class="tab-pane fade" id="top_rate" role="tabpanel" aria-labelledby="nav-top_rate">
+      <app-data [type]="'topRated'" [genres]="genres"></app-data>
+    </div>
+    <div class="tab-pane fade" id="upcoming" role="tabpanel" aria-labelledby="nav-upcoming">
+      <app-data [type]="'upcoming'" [genres]="genres"></app-data>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="row">
+    <div class="float-left col-md-6 title">
+      THEMOVIEBOX
+    </div>
+    <div class="float-right col-md-6 text-right">
+      <span class="foot-text">About</span>
+      <span class="foot-text">Movies</span>
+      <span class="foot-text">Ratings</span>
+      <span class="foot-text">Contact</span>
+    </div>
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="float-left col-md-6 foot-text m-auto">
+      Design by Milan Houter. All right reserved.
+    </div>
+    <div class="float-right col-md-6 text-right m-auto">
+      <img class="foot-icon" src="assets/fa-icon.png" alt="" width="30" height="30"/>
+      <img class="foot-icon" src="assets/pin-icon.png" alt="" width="30" height="30"/>
+      <img class="foot-icon" src="assets/tw-icon.png" alt="" width="30" height="30"/>
+      <img class="foot-icon" src="assets/in-icon.png" alt="" width="30" height="30"/>
+    </div>
+  </div>
 </div>
 
 

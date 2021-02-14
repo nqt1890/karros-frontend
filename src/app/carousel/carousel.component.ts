@@ -23,7 +23,7 @@ export class CarouselComponent implements OnInit {
   constructor() { }
 
   slides = [
-    { src: "assets/Bitmap.png" },
+    { src: "assets/banner1.jpg" },
     { src: "assets/banner2.jpg" },
     { src: "assets/banner3.jpg" }
   ];
