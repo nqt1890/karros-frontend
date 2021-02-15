@@ -7,3 +7,5 @@
 - There are 2 services: data services for getting movies data, genre service for getting genre data.
 
 ## Screenshot
+
+![screenshot](https://github.com/nqt1890/karros-frontend/blob/main/src/sample/screen.JPG)
